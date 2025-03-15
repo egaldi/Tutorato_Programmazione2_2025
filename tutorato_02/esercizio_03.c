@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int main(){
-    int a=375, b=48; //modificare questi assegnamenti per fare prove diverse
+    int a=126, b=147; //modificare questi assegnamenti per fare prove diverse
     int r, magg, min;
 
 
