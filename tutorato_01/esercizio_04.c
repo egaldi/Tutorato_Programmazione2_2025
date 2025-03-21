@@ -5,7 +5,7 @@
 int main(){
 
     int a = 7;
-    float y = 152.23f;
+    float y = 152.923f;
     int sum;
 
     printf("Variabile a = %d\nVariabile y = %f\n",a,y);

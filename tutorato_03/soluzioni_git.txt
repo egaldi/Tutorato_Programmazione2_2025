@@ -1,0 +1,85 @@
+//Esercizi fatti da E.M. Galdi il 15/03/2025
+
+
+
+Esercizio 1: Creare un Repository e Fare il Primo Commit
+Obiettivo: Familiarizzare con i comandi base di Git.
+    1. Aprire il terminale e configurare Git (se non è già configurato): 
+		git config --global user.name "IlTuoNome"
+		git config --global user.email "iltuomail@example.com
+    2. Creare una cartella per il progetto ed entrarci:
+        	mkdir primo-repo && cd primo-repo
+    3. Inizializzare un repository Git:
+               git init
+    4. Creare un file README.md con una breve descrizione:
+		echo "# Il Mio Primo Repository" > README.md
+    5. Aggiungere e committare il file: 
+	       git status
+	       git add README.md 
+	       git status
+	       git commit -m "Aggiunto README"
+    6. Creare un repository su GitHub
+    7. Collegarlo e fare il push: 
+	       git remote add origin git@git.hipert.unimore.it:egaldi/provagit.git
+	       git push --set-upstream origin master
+Esercizio 2: Creare e Gestire un Branch
+Obiettivo: Capire il concetto di branching e la gestione delle modifiche.
+
+    1. Creare un nuovo branch chiamato sviluppo:
+       		git checkout -b sviluppo
+    2. Modificare il file README.md, ad esempio aggiungendo una nuova riga.
+       
+    3. Aggiungere e committare la modifica:
+	       git add README.md
+	       git commit -m "Aggiornato README nel branch sviluppo"
+    4. Tornare al branch principale e verificare che le modifiche non siano presenti:
+	       git checkout master
+	       cat README.md  # Contenuto originale
+    5. Unire il branch sviluppo a master:
+       		git merge sviluppo
+    6. Eliminare il branch dopo il merge:
+       		git branch -d sviluppo
+
+Esercizio 3: Risolvere un Conflitto di Merge
+Obiettivo: Simulare e risolvere un conflitto di merge.
+    1. Assicurarsi di essere nel branch master
+       		git checkout master
+    2. Creare un branch feature1 e modificare README.md aggiungendo la riga Modifica dal branch feature1:
+	       git checkout -b feature1
+	       echo "Modifica dal branch feature1" >> README.md
+	       git add README.md
+	       git commit -m "Modifica dal branch feature1"
+    3. Tornare a main, creare un branch feature2 e modificare lo stesso file in modo diverso:
+	       git checkout master
+	       git checkout -b feature2
+	       echo "Modifica dal branch feature2" >> README.md
+	       git add README.md
+	       git commit -m "Modifica dal branch feature2"
+    4. Tornare a main e fare il merge di feature1:
+	       git checkout master
+	       git merge feature1
+    5. Provare a fare il merge di feature2 (si genererà un conflitto):
+       		git merge feature2
+    6. Risolvere il conflitto aprendo README.md, scegliendo la versione corretta e completando il merge:
+       git add README.md
+       git commit -m "Risolto conflitto tra feature1 e feature2"
+
+
+
+Esercizio 4: Collaborazione su GitLab 
+Obiettivo: Simulare il flusso di lavoro collaborativo usando  clone, e push.
+    1. Clonare il repository remoto : https://github.com/egaldi/tutorato24_25_repository.git
+    2. Creare un branch con nome il proprio numero di matricola 
+	git checkout -b <numero_matricola>
+    3. Creare un main file che stampi a video: “Hello World! “ 
+    4. Committare le modifiche con messaggio “main hello world"
+	git add -A
+	git commit -m "main hello world"
+    5. Aggiungere al main precedente la stampa a video del proprio numero di matricola
+    6. Committare le modifiche con messaggio “aggiunto numero di matricola
+	git add -A
+	git commit -m "aggiunto numero di matricola"
+    7. Pushare il commit eseguito
+	git push -u origin <numero_matricola>
+
+    

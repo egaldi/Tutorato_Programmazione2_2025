@@ -4,9 +4,9 @@
 
 int main(){
 
-float x = 7.153;
-float y = 152.23;
-float z = 56789.1;
+float x = 7.153f;
+float y = 152.23f;
+float z = 56789.1f;
 
 
 printf("%9.3f\n%9.3f\n%9.3f\n",x,y,z);
