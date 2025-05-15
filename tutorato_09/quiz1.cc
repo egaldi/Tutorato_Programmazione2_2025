@@ -1,0 +1,13 @@
+// created by Elena M Galdi on 13 May 2025
+
+
+/*
+Quali delle seguenti affermazioni sui puntatori a funzione in C sono vere?
+
+A. Un puntatore a funzione può essere passato come parametro a un’altra funzione.
+B. Un puntatore a funzione può essere assegnato a una variabile.
+C. I puntatori a funzione devono essere inizializzati a NULL prima di essere usati.
+D. I puntatori a funzione non possono essere contenuti in array.
+E. Un puntatore a funzione può essere dereferenziato ed eseguito come una funzione.
+
+*/
